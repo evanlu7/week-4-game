@@ -1,0 +1,59 @@
+
+
+h1 {
+	background-color: yellow;
+}
+
+body {
+	background-color:;
+}
+
+.numberBox {
+	position:relative;
+	width: 200px;
+	height:50px;
+	background-color: yellow;
+
+}
+
+.happy {
+	width:200px;
+	position: relative;
+}
+
+.screaming {
+	width: 200px;
+	position: relative;
+	left: 250px;
+	top: -205px;
+}
+
+.face {
+	width: 200px;
+	position: relative;
+	left: 450px;
+	top: -405px;
+}
+
+.woah {
+	width: 200px;
+	position: relative;
+	left: 650px;
+	top: -605px;
+}
+
+
+#totalscorebox {
+	position: relative;
+	background-color: lightblue;
+	height:100px;
+	top:-600px;
+}
+
+#winbox {
+	top:-70px;
+	left:220px;
+	width:200px;
+	background-color: yellow;
+	position:relative;
+}

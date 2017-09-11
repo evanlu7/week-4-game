@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+    <h1>LIL UZI COLLECTOR</h1>
+    <title> LIL UZI COLLECTOR </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<!-- 
+
+    Watch the demo.
+
+    The player will have to guess the answer, just like in Hangman. This time, though, the player will guess with numbers instead of letters.
+
+    Here's how the app works:
+
+    There will be four crystals displayed as buttons on the page.
+
+    The player will be shown a random number at the start of the game.
+
+    When the player clicks on a crystal, it will add a specific amount of points to the player's total score.
+        Your game will hide this amount until the player clicks a crystal.
+        When they do click one, update the player's score counter.
+
+    The player wins if their total score matches the random number from the beginning of the game.
+
+    The player loses if their score goes above the random number.
+
+    The game restarts whenever the player wins or loses.
+        When the game begins again, the player should see a new random number. Also, all the crystals will have four new hidden values. Of course, the user's score (and score counter) will reset to zero.
+
+    The app should show the number of games the player wins and loses. To that end, do not refresh the page as a means to restart the game.
+
+Option 1 Game design notes
+
+    The random number shown at the start of the game should be between 19 - 120.
+
+    Each crystal should have a random hidden value between 1 - 12.
+ -->
+
+<body>
+    <p>
+        YOU WILL BE GIVEN A RANDOM NUMBER AT THE START OF THE GAME.
+        <br> THERE ARE FOUR LIL UZIS BELOW. BE CLICKING ON A LIL UZI YOU WILL ADD A SPECIFIC AMOUNT OF POINTS TO YOUR TOTAL SCORE
+        <br> YOU WIN THE GAME BY MATCHING YOUR TOTAL SCORE TO THE RANDOM NUMBER, YOU LOSE THE GAME IF YOUR TOTAL SCORE GOES ABOVE THE RANDOM NUMBER.
+        <br> THE VALUE OF EACH LIL UZI IS HIDDEN FROM YOU UNTIL YOU CLICK ON IT.
+        <br> EACH TIME WHEN THE GAME STARTS, THE GAME WILL CHANGE THE VALUES OF EACH CRYSTAL.
+        <br> YAH!
+    </p>
+    <div id="scorebox">
+    </div>
+    <div class="numberBox">
+    <p> GUESS THIS NUMBER:
+    </p>
+    <span id="numberToGuess"> </span>
+    </div>
+    <div id="winbox">
+        <p>
+            WINS: <span id="wins"> </span>
+            <br> 
+            LOSSES: <span id="losses"> </span>
+            <br>
+            YOU CLICKED <span id="clicked"> </span> TIMES.
+            <br>
+        </p>
+    </div>
+    
+        <div class="happy">
+            <img src="assets/images/lil-uzi-vert-happy.jpg" height=200px width=200px >
+        </div>
+        <div class="screaming">
+        <img src="assets/images/lil-uzi-vert-screaming.jpg" height=200px width=200px>
+        </div>
+        <div class = "face">
+        <img src="assets/images/lil-uzi-vert-png.png" height=200px width=200px>
+        </div>
+        <div class = "woah">
+        <img src="assets/images/lil-uzi-vert-woah-face.jpg" height=200px width=200px>
+        </div>
+        
+    <div id="totalscorebox">
+        <p> TOTAL SCORE: </p>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js">
+    </script>
+</body>
+
+</html>
