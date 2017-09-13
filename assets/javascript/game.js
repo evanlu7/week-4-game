@@ -1,14 +1,17 @@
 var wins = 0;
 var losses = 0;
-var total = 0;
+var total = happyNumber + screamingNumber + faceNumber + woahNumber;
 var counter = 0;
 var randomNumber = "";
-var firstNumber = "";
-var secondNumber = "";
-var thirdNumber = "";
-var fourthNumber = "";
+var happyNumber = "";
+var screamingNumber = "";
+var faceNumber = "";
+var woahNumber = "";
 
-
+console.log(total)
+// random saved code
+// counter++;
+// document.getElementById("clicked").innerHTML = counter;
 
 // this generates a random number between 19 and 120 for the user to guess.
 var generateNumber = Math.floor((Math.random() * 120) + 19);
@@ -20,28 +23,28 @@ var randomNumber =
 
 
 // the following are pictures that generate a number 1-12 when clicked.
-$(".clickme").on("click", function() {
-    counter++;
-    // console.log (counter);
-    document.getElementById("clicked").innerHTML = counter;
-    var firstNumber =
-        Math.floor((Math.random() * 12) + 1);
-    console.log(firstNumber);
-    if (counter === 2) {
-        $("#happy").on("click", function() {
-            document.getElementById("clicked").innerHTML = counter;
-            var secondNumber =
-                Math.floor((Math.random() * 12) + 1);
-            var total = secondNumber + firstNumber;
-            console.log(total)
-        })
-        } else if (counter === 3) {
-        $("#happy").on("click", function() {
-            document.getElementById("clicked").innerHTML = counter;
-            var thirdNumber =
-                Math.floor(Math.random() * 12) + 1;
-            var total = thirdNumber + secondNumber + firstNumber;
-            console.log(total);
-}});
-     
+$("#happy").on("click", function generateHappyNumber() {
+    var happyNumber =
+        Math.floor(Math.random() * 12) + 1;
+    console.log(happyNumber);
+})
+
+
+$("#screaming").on("click", function generateScreamingNumber() {
+    var screamingNumber =
+        Math.floor(Math.random() * 12) + 1;
+    console.log(screamingNumber);
+})
+
+$("#face").on("click", function generateFaceNumber() {
+    var faceNumber =
+        Math.floor(Math.random() * 12) + 1;
+    console.log(faceNumber)
+})
+
+$("#woah").on("click", function generateWoahNumber() {
+    var woahNumber =
+        Math.floor(Math.random() * 12) + 1;
+    console.log(woahNumber)
+})
 
