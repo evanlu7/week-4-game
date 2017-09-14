@@ -1,59 +1,81 @@
 
 
 h1 {
-	background-color: yellow;
+	background-color: white;
+	padding: 10px;
+	border-style: solid;
+	border-color: yellow
 }
 
 body {
-	background-color:;
+	background-color: black;
+}
+
+img {
+	border-style: solid;
+	border-color: yellow;
+
 }
 
 .numberBox {
 	position:relative;
 	width: 200px;
-	height:50px;
-	background-color: yellow;
+	height:80px;
+	background-color: white;
+	padding: 10px;
+	border-style: solid;
+	border-color: yellow;
+	top: -150px;
 
 }
-
-.happy {
+#winbox {
+	position:relative;
+	padding: 10px;
+	top:-105px;
+	height: 80px;
+	left:250px;
+	width:200px;
+	background-color: white;
+	border-style: solid;
+	border-color: yellow;
+	top: -256px;
+	
+}
+#happy {
 	width:200px;
 	position: relative;
+	top: -230px;
 }
 
-.screaming {
+#screaming {
 	width: 200px;
 	position: relative;
-	left: 250px;
-	top: -205px;
+	left: 0px;
+	top: -230px;
 }
 
-.face {
+#face {
 	width: 200px;
 	position: relative;
-	left: 450px;
-	top: -405px;
+	left: 0px;
+	top: -230px;
 }
 
-.woah {
+#woah {
 	width: 200px;
 	position: relative;
-	left: 650px;
-	top: -605px;
+	left: 0px;
+	top: -230px;
 }
 
 
 #totalscorebox {
 	position: relative;
-	background-color: lightblue;
-	height:100px;
-	top:-600px;
+	padding: 10px;
+	background-color: white;
+	height:80px;
+	top:-200px;
+	border-style: solid;
+	border-color: yellow;
 }
 
-#winbox {
-	top:-70px;
-	left:220px;
-	width:200px;
-	background-color: yellow;
-	position:relative;
-}
