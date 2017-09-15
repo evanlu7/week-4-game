@@ -6,38 +6,20 @@ var myObject = {
     total: 0,
     counter: 0,
     randomNumber: 0,
-    happyNumber: 0,
+    happyNumber: Math.floor(Math.random() * 12 + 1),
     screamingNumber: 0,
     faceNumber: 0,
-    woahNumber: 0,
-    total: 0,
-
+    woahNumber: 0
 }
-
-// restart function
-function restart() {
-    var myObject = {
-        wins: 0,
-        losses: 0,
-        total: 0,
-        counter: 0,
-        randomNumber: 0,
-        happyNumber: 0,
-        screamingNumber: 0,
-        faceNumber: 0,
-        woahNumber: 0,
-        total: 0,
-    }
-}
+// var happyNumber = ;
+// var screamingNumber = ;
+// var faceNumber = ;
+// var woahNumber = ;
 
 
-//update total function
-function updateTotal() {
- myObject.total= myObject.happyNumber + myObject.screamingNumber + myObject.faceNumber + myObject.woahNumber
-}
 //outputs total score
 var totalScore =
-    document.getElementById("totalpoints").innerHTML = myObject.total
+    document.getElementById("totalpoints").innerHTML = 0 + this.total
 // this generates a random number between 19 and 120 for the user to guess.
 var generateNumber = Math.floor((Math.random() * 120) + 19);
 console.log(generateNumber);
@@ -55,31 +37,19 @@ var losses =
     document.getElementById("losses").innerHTML = myObject.losses
 
 
-
-function play() {
-    var audio = document.getElementById("audio");
-}
-
-
 // the following are pictures that generate a number 1-12 when clicked.
+
 $("#happy").on("click", function generateHappyNumber() {
-    var happyNumber =
-        Math.floor(Math.random() * 12) + 1;
-    // console.log(happyNumber);
     audio.play();
-    updateTotal();
-    console.log (myObject.total)
+    console.log(myObject.happyNumber);
 })
 
 
 $("#screaming").on("click", function generateScreamingNumber() {
     var screamingNumber =
         Math.floor(Math.random() * 12) + 1;
-    // console.log(screamingNumber);
+    console.log(screamingNumber);
     audio.play();
-    updateTotal();
-
-
 })
 
 $("#face").on("click", function generateFaceNumber() {
@@ -99,6 +69,7 @@ $("#woah").on("click", function generateWoahNumber() {
 })
 
 
+
 // if else for wins / losses.  updates counter, calls restart function.
 if (myObject.updateTotal === myObject.randomNumber) {
     alert("You Win!")
@@ -108,4 +79,23 @@ if (myObject.updateTotal === myObject.randomNumber) {
     losses++;
     alert("You Lose!")
     restart()
+}
+// restart function
+function restart() {
+    var myObject = {
+        wins: 0,
+        losses: 0,
+        total: 0,
+        counter: 0,
+        randomNumber: 0,
+        happyNumber: 0,
+        screamingNumber: 0,
+        faceNumber: 0,
+        woahNumber: 0,
+        total: 0,
+    }
+// audio click
+function play() {
+    var audio = document.getElementById("audio");
+}
 }
