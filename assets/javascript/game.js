@@ -7,9 +7,6 @@ var screamingNumber = Math.floor(Math.random() * 12) + 1;
 var faceNumber = Math.floor(Math.random() * 12) + 1;
 var woahNumber = Math.floor(Math.random() * 12) + 1;
 var addition = 0;
- 
-
-
 
 var updateAdd = function () {
         $('.addition').empty();
@@ -17,6 +14,7 @@ var updateAdd = function () {
 
         $('#wins').empty();
         $('#wins').append(wins);
+
 
         $('#losses').empty();
         $('#losses').append(losses);
@@ -30,22 +28,87 @@ var generateNumber = Math.floor((Math.random() * 120) + 19);
 document.getElementById("randomNumber").innerHTML = generateNumber;
 
 
+var total = 0;
 
+
+function updateTotalHappy () {
+    total += myObject.happyNumber;
+    console.log (total);
+
+    if (total === generateNumber ) {
+    alert("You Win!")
+    wins++;
+    restart()
+} else if (total > generateNumber) {
+    losses++;
+    alert("You Lose!")
+    restart()
+}
+}
+
+function updateTotalScreaming () {
+    total += myObject.screamingNumber;
+    console.log (total);
+
+      if (total === generateNumber ) {
+    alert("You Win!")
+    wins++;
+    restart()
+} else if (total > generateNumber) {
+    losses++;
+    alert("You Lose!")
+    restart()
+}
+}
+
+function updateTotalFace () {
+    total += myObject.faceNumber;
+    console.log (total);
+      if (total === generateNumber ) {
+    alert("You Win!")
+    wins++;
+    restart()
+} else if (total > generateNumber) {
+    losses++;
+    alert("You Lose!")
+    restart()
+}
+
+}
+
+function updateTotalWoah () {
+    total += myObject.woahNumber;
+    console.log (total);
+      if (total === generateNumber ) {
+    alert("You Win!")
+    wins++;
+    restart()
+} else if (total > generateNumber) {
+    losses++;
+    alert("You Lose!")
+    restart()
+}
+}
+// the following are pictures that generate a number 1-12 when clicked.
 $("#happy").on("click", function generateHappyNumber() {
     audio.play();
+
     addition = addition + happyNumber;
     setScore()
     game();
 
+
 })
 $("#screaming").on("click", function generateScreamingNumber() {
     audio.play();
+
     addition = addition + screamingNumber;
     setScore()
     game();
 
 })
 $("#face").on("click", function generateFaceNumber() {
+
     audio.play();
     addition = addition + faceNumber;
     setScore()
@@ -72,6 +135,7 @@ function game() {
         alert("You Lose!")
         restart()
     } else updateAdd();
+
 }
 
 
